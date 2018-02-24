@@ -69,11 +69,11 @@
 
     function flashBackground() {
         var body = document.querySelector('body');
-        body.style.backgroundColor = 'Chartreuse'
-        setTimeout (
-            function(){
+        body.style.backgroundColor = '#00cc00'
+        setTimeout(
+            function () {
                 body.style.backgroundColor = 'green'
-            },100
+            }, 100
         )
     }
     function endGame() {
@@ -81,12 +81,9 @@
         mole.remove();
         alert('Game has ended! Your score is: ' + points + '!')
     }
-    function init() {
-        points = 0
-        time = 10
-        mole = makeMole()
-        displayTime(time)
-        displayPoints(points)
+
+    function startGame() {
+        mole = makeMole();
         gameIntervalId = setInterval(
             function () {
                 mole.remove();
@@ -95,7 +92,23 @@
             },
             1500
         )
+    }
 
+    function init() {
+        points = 0
+        time = 10
+        mole = null
+        displayTime(time)
+        displayPoints(points)
+        document.querySelector('.start-modal button')
+            .addEventListener(
+                'click',
+                function () {
+                    document.querySelector('.start-modal')
+                        .style.display = 'none'
+                    startGame();
+                }
+            )
 
     }
     init()
