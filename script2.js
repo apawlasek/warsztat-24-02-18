@@ -1,0 +1,97 @@
+
+
+console.log('buka!')
+
+// data types in js
+
+//js jest dynamicznie typowany (opp. twardotypowany)
+
+//primitives:
+
+// string
+var textVariable = "huba";
+
+// number
+
+var numVariable = 1.3;
+
+//boolean
+
+var boolVariable = true;
+
+//null
+var boolVariable = null; //jest zdef, ale jest brak
+
+//undefined
+
+var boolVariable = undefined; //niezdefiniowany, nigdy nie istniał
+
+//end of non-objects.
+
+// nonprimitives:
+
+var simplestObj = {
+    name: "Ania",
+    lastname: "P"
+}
+
+console.log(simplestObj);
+
+//nested objects
+
+var nestedObj = {
+    name : "ania",
+    car: {
+        brand: "opel",
+        model: "asterka"
+    }
+}
+
+console.log(nestedObj.car.model);
+
+// arrays
+
+var simpleArray = [1,2,3,4];
+console.log(simpleArray);
+
+
+//  .name = ['name']
+
+
+//higher order functions: for each, map, filter, reduce (przyjmują funkcję) funfunfunction yt functional programming
+
+function hello  (name, num) {
+    for (var i=0; i<num; i++) {
+        console.log('hello ' + name +'!')
+    }
+}
+
+hello('ziutek', 6);
+
+(function (){
+
+var  secondsCounter = 1;
+
+var intervalId = setInterval(
+    function () {
+        console.log((secondsCounter++)*2)
+    },
+    1000 //in miliseconds
+)
+
+setTimeout(
+    function() {
+        clearInterval(intervalId)
+    },
+    5000
+)
+})()
+
+
+
+function add(a,b) {
+    var some = hju
+    return a + b
+}
+
+console.log()

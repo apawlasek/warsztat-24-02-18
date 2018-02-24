@@ -1,67 +1,35 @@
-console.log('buka!')
+// var  body = document.querySelector('body');
 
-// data types in js
+// cons
+// //przyjm. dwa arg: 1- rodzaj, 2-wywołanie f
 
-//js jest dynamicznie typowany (opp. twardotypowany)
+// body.addEventListener(
+//     'click',
+//     function() {
+//         console.log('klik')
+//     }
 
-//primitives:
+// )
 
-// string
-var textVariable = "huba";
 
-// number
+(function () {
 
-var numVariable = 1.3;
+    function makeMole(){
+        var molePosX = Math.round(
+            Math.random() * (window.innerWidth - window.innerHeight/10));
 
-//boolean
+        var molePosY = Math.round(
+            Math.random() * (window.innerHeight - window.innerHeight/10))
 
-var boolVariable = true;
+        var mole = document.createElement('div')
 
-//null
-var boolVariable = null; //jest zdef, ale jest brak
+        mole.classList.add('mole')
 
-//undefined
+        mole.style.left = molePosX + 'px';
+        mole.style.top = molePosY +'px';
 
-var boolVariable = undefined; //niezdefiniowany, nigdy nie istniał
-
-//end of non-objects.
-
-// nonprimitives:
-
-var simplestObj = {
-    name: "Ania",
-    lastname: "P"
-}
-
-console.log(simplestObj);
-
-//nested objects
-
-var nestedObj = {
-    name : "ania",
-    car: {
-        brand: "opel",
-        model: "asterka"
+        document.querySelector('body').appendChild(mole)
     }
-}
+makeMole()
 
-console.log(nestedObj.car.model);
-
-// arrays
-
-var simpleArray = [1,2,3,4];
-console.log(simpleArray);
-
-
-//  .name = ['name']
-
-
-//higher order functions: for each, map, filter, reduce (przyjmują funkcję) funfunfunction yt functional programming
-
-function hello  (name, num) {
-    for (var i=0; i<num; i++) {
-        console.log('hello ' + name +'!')
-    }
-}
-
-hello('ziutek', 6)
+})()
