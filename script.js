@@ -22,7 +22,35 @@ var boolVariable = null; //jest zdef, ale jest brak
 
 //undefined
 
-var boolVariable = undifined; //niezdefiniowany, nigdy nie istniał
+var boolVariable = undefined; //niezdefiniowany, nigdy nie istniał
 
 //end of non-objects.
 
+// nonprimitives:
+
+var simplestObj = {
+    name: "Ania",
+    lastname: "P"
+}
+
+console.log(simplestObj);
+
+//nested objects
+
+var nestedObj = {
+    name : "ania",
+    car: {
+        brand: "opel",
+        model: "asterka"
+    }
+}
+
+console.log(nestedObj.car.model);
+
+// arrays
+
+var simpleArray = [1,2,3,4];
+console.log(simpleArray);
+
+
+//  .name = ['name']
