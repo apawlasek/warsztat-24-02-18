@@ -54,3 +54,14 @@ console.log(simpleArray);
 
 
 //  .name = ['name']
+
+
+//higher order functions: for each, map, filter, reduce (przyjmują funkcję) funfunfunction yt functional programming
+
+function hello  (name, num) {
+    for (var i=0; i<num; i++) {
+        console.log('hello ' + name +'!')
+    }
+}
+
+hello('ziutek', 6)
